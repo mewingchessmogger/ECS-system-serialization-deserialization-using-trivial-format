@@ -1,0 +1,10 @@
+^C:\USERS\GAMING\SOURCE\REPOS\FILEREADING\BUILD\CMAKEFILES\2505F0CB4273F8603A945F91B61CB10E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Gaming/source/repos/filereading -BC:/Users/Gaming/source/repos/filereading/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Gaming/source/repos/filereading/build/filereading.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,44 @@
+Entity 0 {
+   struct Bullet {
+      vec3 position 0.100 0.200 0.300
+      int size 2
+      float drag 0.200
+   }
+}
+Entity 1 {
+   struct Bullet {
+      vec3 position 0.500 0.200 0.300
+      int size 20
+      float drag 0.600
+   }
+}
+Entity 2 {
+   struct Bullet {
+      vec3 position 0.900 0.900 0.900
+      int size 99
+      float drag 0.900
+   }
+   struct Health {
+      float health 299.000
+      int hearts 99
+      int foo 799
+   }
+}
+Entity 3 {
+   struct Renderable {
+      uint32_t meshID 1
+   }
+}
+Entity 4 {
+   struct Health {
+      float health 0.000
+      int hearts 5
+      int foo 7
+   }
+}
+Entity 5 {
+   struct Parent {
+      uint32_t parentID 2
+      uint32_t level 1
+   }
+}

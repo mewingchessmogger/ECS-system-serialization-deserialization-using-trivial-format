@@ -1,0 +1,3 @@
+C:/Users/Gaming/source/repos/filereading/build/CMakeFiles/filereading.dir
+C:/Users/Gaming/source/repos/filereading/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Gaming/source/repos/filereading/build/CMakeFiles/ZERO_CHECK.dir

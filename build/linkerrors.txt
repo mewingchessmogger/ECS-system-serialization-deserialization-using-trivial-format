@@ -1,0 +1,8 @@
+================================================================================
+Linker Errors
+Generated: 2026-06-19T08:28:49.422Z
+Total Errors: 1
+================================================================================
+
+[LNK1168] (MSVC)
+cannot open C:\Users\Gaming\source\repos\filereading\build\Debug\filereading.exe for writing [C:\Users\Gaming\source\repos\filereading\build\filereading.vcxproj]
