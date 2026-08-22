@@ -1,5 +1,5 @@
 This repo uses  typeid which causes complications especially when hot reloading dlls that include querying pools created in it. Below macros is a much better solution than using typeID, just type it in each component like this:
-
+ 
 ```cpp
 struct FooComponent{
   int bulletsLeft{};
@@ -58,20 +58,20 @@ Serialization/deserialization usage with new
 ```cpp
       //alternative function for easier readability of files to be deserialized
  void deserializeComponent(Entity e, std::string_view compName, std::vector<Variable>&& vars){
-      if(stringToPool.find(std::string{compName}) == stringToPool.end()){
+      uint64_t compHash = Hash(compName);
+      if(pools.find(compHash) == pools.end()){
           throw std::runtime_error("POOL DOES  NOT EXIST!");
       }
-      
-      pools[Hash(sName)]->assignComponentFields(e, std::move(vars));
+      pools[compHash]->assignComponentFields(e, std::move(vars));
   }
 
   void deserializeComponent(Entity e, uint64_t compHash, std::vector<Variable>&& vars){
       if(pools.find(compHash) == pools.end()){
           throw std::runtime_error("POOL DOES  NOT EXIST!");
       }
-      
       pools[compHash]->assignComponentFields(e, std::move(vars));
   }
 ```
+All in all good, name collisions are insured against due to createpool checking if it already exists!, so all good here!!
 
 
